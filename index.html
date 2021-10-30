@@ -16,7 +16,9 @@
 				
 				let formatTime = date.toLocaleTimeString().replace(/AM|PM/, '');
 				
-				document.getElementById("datetime").innerHTML = "My name is Jungmin Moon and my favorite hobby is playing video games. " 
+				document.getElementById("datetime").innerHTML = "My name is Jungmin Moon" 
+					+ " and my favorite hobby is playing video games. "
+					+ " Current Time - " 
 					+ formatTime;
 			}
 			
@@ -26,6 +28,7 @@
   
 	<body>
 		<h1 id = "datetime" onload = displayTime();></h1>
+		<!--<h1 id = "datetime" onload = displayTime();></h1> -->
 	</body>
 
 
