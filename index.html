@@ -1,11 +1,34 @@
 <!DOCTYPE html> 
 
 <html>
-  <body>
-    <h1>Full name: Jungmin Moon</h1>
-    <h1>Favorite Hobby: Playing video games</h1>
   
-  </body>
+	<head>
+		<script>
+		
+		
+			function updateTime() {
+				let refresh = 1000;
+				setInterval('displayTime()', refresh);
+			}
+			
+			function displayTime() {
+				let date = new Date();
+				
+				let formatTime = date.toLocaleTimeString().replace(/AM|PM/, '');
+				
+				document.getElementById("datetime").innerHTML = formatTime
+					+ " Favorite Hobby: Playing video games";
+			}
+			
+			updateTime();
+		</script>
+	</head>
+  
+	<body>
+		<h1>Full name: Jungmin Moon</h1>
+		<h1 id = "datetime" onload = displayTime();></h1>
+	</body>
+
 
 
 </html>
